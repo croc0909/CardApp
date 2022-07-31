@@ -17,14 +17,14 @@ var Cards = [
 Card(cardName: "apple",cardImage: UIImage(named: "apple")),
 Card(cardName: "cherry",cardImage: UIImage(named: "cherry")),
 Card(cardName: "strawberry",cardImage: UIImage(named: "strawberry")),
-Card(cardName: "lemon",cardImage: UIImage(named: "lemon")),
-Card(cardName: "pineapple",cardImage: UIImage(named: "pineapple")),
-Card(cardName: "grape",cardImage: UIImage(named: "grape")),
+Card(cardName: "banana",cardImage: UIImage(named: "banana")),
+Card(cardName: "tangerine",cardImage: UIImage(named: "tangerine")),
+Card(cardName: "watermelon",cardImage: UIImage(named: "watermelon")),
 
 Card(cardName: "apple",cardImage: UIImage(named: "apple")),
 Card(cardName: "cherry",cardImage: UIImage(named: "cherry")),
 Card(cardName: "strawberry",cardImage: UIImage(named: "strawberry")),
-Card(cardName: "lemon",cardImage: UIImage(named: "lemon")),
-Card(cardName: "pineapple",cardImage: UIImage(named: "pineapple")),
-Card(cardName: "grape",cardImage: UIImage(named: "grape"))
+Card(cardName: "banana",cardImage: UIImage(named: "banana")),
+Card(cardName: "tangerine",cardImage: UIImage(named: "tangerine")),
+Card(cardName: "watermelon",cardImage: UIImage(named: "watermelon"))
 ]

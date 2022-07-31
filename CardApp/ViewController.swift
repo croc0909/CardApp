@@ -51,10 +51,7 @@ class ViewController: UIViewController {
         cards.shuffle()
         //初始化卡片
         self.displayCards()
-        
-        
     }
-    
     
     func displayCards()
     {
@@ -63,9 +60,8 @@ class ViewController: UIViewController {
             cardButtons[i].setImage(cards[i].cardImage, for: .normal)
             cards[i].isflipped = true
             //設定圓角
-            cardButtons[i].layer.cornerRadius = 10
-            cardButtons[i].imageView?.contentMode = .scaleAspectFill
-            //cardButtons[i].behavioralStyle
+            cardButtons[i].imageView?.clipsToBounds = true
+            cardButtons[i].layer.cornerRadius = 20
         }
         //
         if time == nil {
@@ -82,11 +78,10 @@ class ViewController: UIViewController {
             time = nil
             
             for (i,_) in cards.enumerated() {
-                cardButtons[i].setImage(UIImage(named: "cardBack"), for: .normal)
+                cardButtons[i].setImage(UIImage(named: "cardback"), for: .normal)
                 //使用 UIView 的翻牌效果
                 UIView.transition(with: cardButtons[i], duration: 0.5, options: .transitionFlipFromBottom, animations: nil, completion: nil)
                 cards[i].isflipped = false
-                
             }
             
             //使用DispatchQueue設定：翻牌後三秒執行timeView翻轉及開始gameTime倒數
@@ -189,7 +184,7 @@ class ViewController: UIViewController {
                 UIView.transition(with: cardButtons[index], duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
                 cards[index].isflipped = true
             }else{
-                cardButtons[index].setImage(UIImage(named: "cardBack"), for: .normal)
+                cardButtons[index].setImage(UIImage(named: "cardback"), for: .normal)
                 UIView.transition(with: cardButtons[index], duration: 0.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
                 cards[index].isflipped = false
             }
